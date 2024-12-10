@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background: #333333;
+  --border: #5c5c5c;
+  --accent: #ffb458;
+  --highlight: #ffb45898;
+  --text: #ffffff;
+  --text-2: #afafaf;
+}
+
+::selection {
+  background: var(--highlight);
+}
+
+body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: hidden;
+  background-color: var(--background);
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    overflow-y: auto;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  margin: 20px;
+}
+
+input {
+  background: none;
+  border: 2px solid var(--border);
+  border-radius: 50px;
+  padding: 10px 15px;
+  width: 15em;
+  color: var(--text);
+  outline: none;
+  font-size: 18px;
+  transition: 0.1s;
+}
+
+input:focus {
+  border: 2px solid var(--accent);
+  transition: 0.2s;
+}
+
+header > span {
+  color: var(--accent);
+  font-size: 30px;
+  font-family: "Funnel Display", sans-serif;
+}
+
+main {
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    flex-wrap: wrap;
+  }
+}
+
+.day {
+  display: flex;
+  flex: 0;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  border: solid 2px var(--border);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .day {
+    flex: 1;
+  }
+}
+
+.day-location {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.day-header {
+  display: flex;
+  align-items: flex-end;
+}
+
+.day-header > span {
+  margin-left: -80px;
+  font-size: 110px;
+  color: var(--text);
+  text-shadow: 0 0 10px var(--background);
+  font-weight: 700;
+}
+
+.day-description {
+  color: var(--text-2);
+  margin-bottom: 15px;
+}
+
+.day-details {
+  width: 300px;
+  padding: 20px;
+}
+
+.day-temps > span {
+  color: var(--text-2);
+}
+
+.day-modules {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px;
+  gap: 20px;
+}
+
+.day-module {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 120px;
+  height: 100px;
+}
+
+.day-module > div {
+  color: var(--text-2);
+  font-size: 14px;
+}
+
+.day-module > span {
+  font-size: 44px;
+}
+
+.forecast {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0 40px;
+}
+
+.forecast > span {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+.hourly {
+  display: flex;
+  flex: 0;
+  gap: 40px;
+  height: min-content;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  width: min-content;
+  padding: 5px 20px;
+}
+
+.hour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.hour > div {
+  font-size: 14px;
+  color: var(--text-2);
+}
+
+.hour > span {
+  font-size: 20px;
+}

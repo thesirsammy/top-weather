@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>¡umbrella</title>
 </head>
 <body>
-    
+    <header>
+        <span>¡Umbrella</span>
+        <div class="search">
+            <input placeholder="search..." id="search"></input>
+        </div>
+        <div class="connect">Connect</div>
+    </header>
+    <main>
+        <div class="day">
+            <div class="day-location" id="location"></div>
+            <div class="day-header">
+                <img id="icon" height="190px"/>
+                <span id="temp"></span>
+            </div>
+            <div class="day-description" id="desc"></div>
+            <!--<div class="day-details" id="details">It's sunny outside, with higher temperatures expected tomorrow.</div>-->
+            <div class="day-temps">
+                <span id="high"></span>
+                <span id="low"></span>
+            </div>
+            <div class="day-modules">
+                <div class="day-module">
+                    <div>FEELS LIKE:</div>
+                    <span id="feelsLike"></span>
+                </div>
+                <div class="day-module">
+                    <div>RAIN:</div>
+                    <span id="rain"></span>
+                </div>
+                <div class="day-module">
+                    <div>WIND SPEED:</div>
+                    <span id="wind"></span>
+                </div>
+                <div class="day-module">
+                    <div>HUMIDITY:</div>
+                    <span id="humidity"></span>
+                </div>
+            </div>
+        </div>
+        <div class="forecast">
+            <span>Next Hour</span>
+            <div class="hourly">
+                <div class="hour">
+                    <div>7:00</div>
+                    <img src="img/icons/01d.svg" height="50px" />
+                    <span>63˚</span>
+                </div>
+                <div class="hour">
+                    <div>8:00</div>
+                    <img src="img/icons/01d.svg" height="50px" />
+                    <span>62˚</span>
+                </div>
+                <div class="hour">
+                    <div>9:00</div>
+                    <img src="img/icons/01d.svg" height="50px" />
+                    <span>60˚</span>
+                </div>
+                <div class="hour">
+                    <div>10:00</div>
+                    <img src="img/icons/01d.svg" height="50px" />
+                    <span>59˚</span>
+                </div>
+                <div class="hour">
+                    <div>11:00</div>
+                    <img src="img/icons/01d.svg" height="50px" />
+                    <span>57˚</span>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
