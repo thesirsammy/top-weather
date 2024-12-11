@@ -3,7 +3,6 @@ import { toCoords, getData } from "./data";
 
 function geoSuccess(pos) {
     const crd = pos.coords;
-
     getData(`lat=${crd.latitude}&lon=${crd.longitude}`)
 }
 

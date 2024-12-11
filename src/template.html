@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡umbrella</title>
+    <meta name="darkreader-lock">
 </head>
 <body>
+
+    <div class="loader" id="loader">
+        <img src="img/icons/compass.svg" height="200px" />
+    </div>
+
     <header>
-        <span>¡Umbrella</span>
-        <div class="search">
+        <span class="logo-desktop">¡Umbrella</span>
+        <span class="logo-mobile">¡U</span>
+        <div class="header-right">
             <input placeholder="search..." id="search"></input>
+            <a class="connect" href="https://github.com/thesirsammy/top-weather"><img src="img/icon.png" height="50px" /></a>
         </div>
-        <div class="connect">Connect</div>
     </header>
+
     <main>
         <div class="day">
             <div class="day-location" id="location"></div>
@@ -37,7 +45,7 @@
                 </div>
                 <div class="day-module">
                     <div>WIND SPEED:</div>
-                    <span id="wind"></span>
+                    <span style="font-size: 32px;" id="wind"></span>
                 </div>
                 <div class="day-module">
                     <div>HUMIDITY:</div>
@@ -46,34 +54,134 @@
             </div>
         </div>
         <div class="forecast">
+
+            <!--Hourly Forecast-->
             <span>Next Hour</span>
             <div class="hourly">
                 <div class="hour">
-                    <div>7:00</div>
-                    <img src="img/icons/01d.svg" height="50px" />
-                    <span>63˚</span>
+                    <div id="hour1"></div>
+                    <img id="hour1img" src="img/icons/01d.svg" height="50px" />
+                    <span id="hour1temp"></span>
                 </div>
                 <div class="hour">
-                    <div>8:00</div>
-                    <img src="img/icons/01d.svg" height="50px" />
-                    <span>62˚</span>
+                    <div id="hour2"></div>
+                    <img id="hour2img" src="img/icons/01d.svg" height="50px" />
+                    <span id="hour2temp"></span>
                 </div>
                 <div class="hour">
-                    <div>9:00</div>
-                    <img src="img/icons/01d.svg" height="50px" />
-                    <span>60˚</span>
+                    <div id="hour3"></div>
+                    <img id="hour3img" src="img/icons/01d.svg" height="50px" />
+                    <span id="hour3temp"></span>
                 </div>
                 <div class="hour">
-                    <div>10:00</div>
-                    <img src="img/icons/01d.svg" height="50px" />
-                    <span>59˚</span>
+                    <div id="hour4"></div>
+                    <img id="hour4img" src="img/icons/01d.svg" height="50px" />
+                    <span id="hour4temp"></span>
                 </div>
                 <div class="hour">
-                    <div>11:00</div>
-                    <img src="img/icons/01d.svg" height="50px" />
-                    <span>57˚</span>
+                    <div id="hour5"></div>
+                    <img id="hour5img" src="img/icons/01d.svg" height="50px" />
+                    <span id="hour5temp"></span>
                 </div>
             </div>
+
+            <!--Weekly Forecast-->
+            <span>Weekly Forecast</span>
+            <div class="week">
+                <div class="week-day">
+                    <span class="week-date" id="weekDate1"></span>
+                    <div class="week-details">
+                        <div class="week-desc" id="weekTemp1"></div>
+                        <img height="30px" id="weekImg1" />
+                        <div class="week-desc" id="weekDesc1"></div>
+                    </div>
+                    <span class="week-temp" id="weekRange1"></span>
+                </div>
+                <div class="week-day">
+                    <span class="week-date" id="weekDate2"></span>
+                    <div class="week-details">
+                        <div class="week-desc" id="weekTemp2"></div>
+                        <img height="30px" id="weekImg2" />
+                        <div class="week-desc" id="weekDesc2"></div>
+                    </div>
+                    <span class="week-temp" id="weekRange2"></span>
+                </div>
+                <div class="week-day">
+                    <span class="week-date" id="weekDate3"></span>
+                    <div class="week-details">
+                        <div class="week-desc" id="weekTemp3"></div>
+                        <img height="30px" id="weekImg3" />
+                        <div class="week-desc" id="weekDesc3"></div>
+                    </div>
+                    <span class="week-temp" id="weekRange3"></span>
+                </div>
+                <div class="week-day">
+                    <span class="week-date" id="weekDate4"></span>
+                    <div class="week-details">
+                        <div class="week-desc" id="weekTemp4"></div>
+                        <img height="30px" id="weekImg4" />
+                        <div class="week-desc" id="weekDesc4"></div>
+                    </div>
+                    <span class="week-temp" id="weekRange4"></span>
+                </div>
+                <div class="week-day">
+                    <span class="week-date" id="weekDate5"></span>
+                    <div class="week-details">
+                        <div class="week-desc" id="weekTemp5"></div>
+                        <img height="30px" id="weekImg5" />
+                        <div class="week-desc" id="weekDesc5"></div>
+                    </div>
+                    <span class="week-temp" id="weekRange5"></span>
+                </div>
+                <div class="week-day">
+                    <span class="week-date" id="weekDate6"></span>
+                    <div class="week-details">
+                        <div class="week-desc" id="weekTemp6"></div>
+                        <img height="30px" id="weekImg6" />
+                        <div class="week-desc" id="weekDesc6"></div>
+                    </div>
+                    <span class="week-temp" id="weekRange6"></span>
+                </div>
+                <div class="week-day">
+                    <span class="week-date" id="weekDate7"></span>
+                    <div class="week-details">
+                        <div class="week-desc" id="weekTemp7"></div>
+                        <img height="30px" id="weekImg7" />
+                        <div class="week-desc" id="weekDesc7"></div>
+                    </div>
+                    <span class="week-temp" id="weekRange7"></span>
+                </div>
+                <div class="week-day">
+                    <span class="week-date" id="weekDate8"></span>
+                    <div class="week-details">
+                        <div class="week-desc" id="weekTemp8"></div>
+                        <img height="30px" id="weekImg8" />
+                        <div class="week-desc" id="weekDesc8"></div>
+                    </div>
+                    <span class="week-temp" id="weekRange8"></span>
+                </div>
+                <div class="week-day">
+                    <span class="week-date" id="weekDate9"></span>
+                    <div class="week-details">
+                        <div class="week-desc" id="weekTemp9"></div>
+                        <img height="30px" id="weekImg9" />
+                        <div class="week-desc" id="weekDesc9"></div>
+                    </div>
+                    <span class="week-temp" id="weekRange9"></span>
+                </div>
+                <div class="week-day">
+                    <span class="week-date" id="weekDate10"></span>
+                    <div class="week-details">
+                        <div class="week-desc" id="weekTemp10"></div>
+                        <img height="30px" id="weekImg10" />
+                        <div class="week-desc" id="weekDesc10"></div>
+                    </div>
+                    <span class="week-temp" id="weekRange10"></span>
+                </div>
+            </div>
+
+            <div class="footer">Made by <a href="https://samseeman.com">Samuel Seeman</a> 🔆 Thanks for stopping by!</div>
+
         </div>
     </main>
 </body>
