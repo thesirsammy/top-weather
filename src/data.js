@@ -20,7 +20,7 @@ let state;
 
 export async function toCoords(query) {
   try {
-    const geoResponse = await fetch(`http://pro.openweathermap.org/geo/1.0/direct?q=${query}&limit=1&appid=${API_KEY}`,
+    const geoResponse = await fetch(`https://pro.openweathermap.org/geo/1.0/direct?q=${query}&limit=1&appid=${API_KEY}`,
       { mode: 'cors' }
     )
     const coords = await geoResponse.json();
